@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太極拳クイズで学ぶ基礎知識 - TaiChi Learning Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fcfbf7;
+            --accent-blue: #2563eb;
+            --accent-purple: #8b5cf6;
+            --text-main: #1a202c;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+        }
+
+        .title-serif {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 900;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        .title-sub {
+            letter-spacing: 0.4em;
+            font-weight: 800;
+            color: #4a5568;
+            text-indent: 0.4em;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quiz-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <div class="max-w-2xl mx-auto px-4 py-8 md:py-12">
+        
+        <!-- ナビゲーション -->
+        <nav class="mb-8 fade-in">
+            <a href="https://yoshi0213saku-spec.github.io/deji-sogouannai01/" class="inline-flex items-center space-x-2 text-gray-400 hover:text-blue-600 transition-colors duration-300 group">
+                <div class="w-8 h-8 rounded-full bg-white border border-gray-100 flex items-center justify-center shadow-sm group-hover:border-blue-100 group-hover:bg-blue-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </div>
+                <span class="text-xs font-bold tracking-widest uppercase">総合案内に戻る</span>
+            </a>
+        </nav>
+
+        <!-- ヘッダー -->
+        <header class="text-center mb-12 fade-in">
+            <div class="inline-flex items-center space-x-2 bg-blue-50 px-4 py-1.5 rounded-full mb-6 border border-blue-100">
+                <span class="text-[10px] font-black text-blue-600 tracking-[0.15em] uppercase">TaiChi e-Learning Portal</span>
+            </div>
+            
+            <div class="space-y-3">
+                <p class="text-xs md:text-sm title-sub uppercase">太極拳クイズで学ぶ基礎知識</p>
+                <h1 class="text-2xl md:text-4xl text-gray-900 title-serif">
+                    楽しく深める <span class="text-blue-600">太極拳の知恵</span>
+                </h1>
+                <p class="text-sm text-gray-500 mt-4 font-medium">
+                    太極拳の基礎や動作の理解を、クイズ形式で楽しく学べる太極拳クイズです。
+                </p>
+            </div>
+        </header>
+
+        <div class="space-y-8 fade-in">
+            <!-- 概要カード -->
+            <div class="glass-card rounded-3xl p-8 border border-gray-100 shadow-sm">
+                <section>
+                    <h2 class="text-xs font-bold text-blue-500 uppercase tracking-[0.3em] mb-4">Course Overview</h2>
+                    <h3 class="text-lg font-bold mb-4 text-gray-800 border-l-4 border-blue-600 pl-3">概要</h3>
+                    <div class="text-sm text-gray-600 leading-relaxed space-y-4">
+                        <p>
+                            太極拳の基本動作や技のポイント、理論や用語などをテーマにした学習クイズです。
+                        </p>
+                        <p>
+                            細かな動作や型の理解を深めながら、太極拳の知識を確認することができます。
+                        </p>
+                        <p>
+                            クイズに挑戦しながら、太極拳の奥深い世界を楽しく学ぶことができます。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- クイズ選択セクション -->
+            <div class="space-y-4">
+                <h2 class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-2 px-2">Select Quiz Level</h2>
+                
+                <!-- 30問クイズ -->
+                <a href="https://yoshi0213saku-spec.github.io/taikyokuken-quiz02/" 
+                   class="block quiz-card glass-card rounded-2xl p-6 transition-all duration-300 border border-gray-100 group">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-5">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">太極拳 e-learning クイズ 30問</h4>
+                                <p class="text-xs text-gray-400 mt-1">基本の確認に最適なスタンダード編</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-bold text-blue-500 bg-blue-50 px-3 py-1 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors">START</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 100問クイズ -->
+                <a href="https://yoshi0213saku-spec.github.io/taikyokuken-quiz0100/" 
+                   class="block quiz-card glass-card rounded-2xl p-6 transition-all duration-300 border border-gray-100 group">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-5">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">太極拳 e-learning クイズ 100問</h4>
+                                <p class="text-xs text-gray-400 mt-1">知識を極めるためのマスター編</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-bold text-purple-500 bg-purple-50 px-3 py-1 rounded-full group-hover:bg-purple-600 group-hover:text-white transition-colors">CHALLENGE</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- キュレーター紹介 -->
+            <div class="glass-card rounded-3xl p-10 text-center mt-12 border border-gray-100">
+                <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-6 font-bold">Authorized Curator</p>
+                <div class="relative w-28 h-20 mx-auto mb-6 flex items-center justify-center">
+                    <img src="./aikon-sita.png" alt="Digital Archive Icon" class="w-full h-full object-cover rounded-xl shadow-sm border border-gray-100" onerror="this.src='https://via.placeholder.com/120x80?text=Curator'">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-1">中島 義健</h4>
+                <p class="text-sm text-blue-600 font-bold mb-4">日本武術太極拳連盟 会員</p>
+                <a href="mailto:yoshi0213@gmail.com" class="text-xs text-gray-400 font-mono bg-gray-50 py-2 rounded-lg inline-block px-4 hover:bg-gray-100 hover:text-blue-600 transition-colors">
+                    yoshi0213@gmail.com
+                </a>
+            </div>
+            
+            <!-- カテゴリーセクション -->
+            <div class="text-center pt-8 border-t border-gray-100">
+                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mr-2">Category:</span>
+                <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-xs font-bold">太極拳・武術</span>
+            </div>
+        </div>
+
+        <footer class="mt-16 text-center text-gray-400 text-[10px] tracking-[0.5em] uppercase font-bold pb-8">
+            &copy; 2024 AI TaiChi Learning Digital Archive
+        </footer>
+    </div>
+
+</body>
+</html>
